@@ -1,7 +1,11 @@
 // 상수 정의
 
+// 환경 변수가 설정되어 있으면 사용, 없으면 환경에 따라 자동 선택
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+  process.env.NEXT_PUBLIC_API_URL ||
+  (process.env.NODE_ENV === 'production'
+    ? 'https://snscloneback.onrender.com'
+    : 'http://localhost:3001');
 
 export const API_ENDPOINTS = {
   AUTH: {
