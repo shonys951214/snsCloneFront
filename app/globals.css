@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --instagram-blue: #0095f6;
+  --instagram-gray: #8e8e8e;
+  --instagram-border: #dbdbdb;
 }
 
 @theme inline {
@@ -23,4 +26,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 인스타그램 스타일 유틸리티 */
+.instagram-card {
+  background: white;
+  border: 1px solid var(--instagram-border);
+  border-radius: 8px;
 }
